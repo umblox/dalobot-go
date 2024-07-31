@@ -15,20 +15,26 @@ Telegram bot untuk OpenWRT yang memungkinkan admin mengisi saldo pengguna dan pe
    ```sh
    git clone https://github.com/username/openwrt-telegram-bot.git
 2. Navigasikan ke direktori proyek :
+   ```sh
    cd openwrt-telegram-bot
 3. Kompilasi file GO :
+   ```sh
    go build telebot.go
 4. Buat direktori untuk file yang diperlukan:
+   ```sh
    mkdir -p /root/Telebot-Radius/files
 5. Salin file yang diperlukan:
+   ```sh
    cp telebot /usr/bin/
    cp telebot.sh /etc/init.d/telebot
    cp auth.txt /root/Telebot-Radius/files/
    cp profile.json /root/Telebot-Radius/files/
 6. Ubah izin file :
+   ```sh
    chmod +x /usr/bin/telebot
    chmod +x /etc/init.d/telebot
 7. Aktifkan dan mulai layanan :
+   ```sh  
    /etc/init.d/telebot enable
    /etc/init.d/telebot start
 #################################################################
