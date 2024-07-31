@@ -90,14 +90,14 @@ func handleStart(bot *tgbotapi.BotAPI, update tgbotapi.Update, profiles Profiles
         msg := tgbotapi.NewMessage(update.Message.Chat.ID, commands)
         bot.Send(msg)
     } else {
-        welcomeMessage := fmt.Sprintf("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\nACCESS USER\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\nSelamat datang di Mutiara-Wrt Billbot\nUsername  :  %s\nUser Id        :  %d\nBalance      :   Rp.%d\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬", username, userID, profile.Balance)
+        welcomeMessage := fmt.Sprintf("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\nACCESS USER\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\nSelamat datang di Arneta.ID DaloBot\nUsername  :  %s\nUser Id        :  %d\nBalance      :   Rp.%d\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬", username, userID, profile.Balance)
         keyboard := tgbotapi.NewInlineKeyboardMarkup(
             tgbotapi.NewInlineKeyboardRow(
                 tgbotapi.NewInlineKeyboardButtonData("DAPATKAN KODE", "get_code"),
                 tgbotapi.NewInlineKeyboardButtonData("TOPUP SALDO", "start_topup"),
             ),
             tgbotapi.NewInlineKeyboardRow(
-                tgbotapi.NewInlineKeyboardButtonURL("HUBUNGI ADMIN", "https://t.me/Maizil41"),
+                tgbotapi.NewInlineKeyboardButtonURL("HUBUNGI ADMIN", "https://t.me/arnetadotid"),
             ),
         )
         msg := tgbotapi.NewMessage(update.Message.Chat.ID, welcomeMessage)
@@ -117,14 +117,14 @@ func handleMenu(bot *tgbotapi.BotAPI, update tgbotapi.Update, profiles Profiles)
     } else if exists {
         balance := profile.Balance
         username := profile.Username
-        welcomeMessage := fmt.Sprintf("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\nACCESS USER\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\nSelamat datang di Mutiara-Wrt Billbot\nUsername  :  %s\nUser Id        :  %d\nBalance      :   Rp.%d\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬", username, userID, balance)
+        welcomeMessage := fmt.Sprintf("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\nACCESS USER\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\nSelamat datang di Arneta.ID DaloBot\nUsername  :  %s\nUser Id        :  %d\nBalance      :   Rp.%d\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬", username, userID, balance)
         keyboard := tgbotapi.NewInlineKeyboardMarkup(
             tgbotapi.NewInlineKeyboardRow(
                 tgbotapi.NewInlineKeyboardButtonData("DAPATKAN KODE", "get_code"),
                 tgbotapi.NewInlineKeyboardButtonData("TOPUP SALDO", "start_topup"),
             ),
             tgbotapi.NewInlineKeyboardRow(
-                tgbotapi.NewInlineKeyboardButtonURL("HUBUNGI ADMIN", "https://t.me/Maizil41"),
+                tgbotapi.NewInlineKeyboardButtonURL("HUBUNGI ADMIN", "https://t.me/arnetadotid"),
             ),
         )
         msg := tgbotapi.NewMessage(update.Message.Chat.ID, welcomeMessage)
@@ -233,7 +233,7 @@ func handleCallbackQuery(bot *tgbotapi.BotAPI, update tgbotapi.Update, profiles 
         msg := tgbotapi.NewMessage(callback.Message.Chat.ID, "Kode voucher Anda: ABC123456")
         bot.Send(msg)
     case "start_topup":
-        msg := tgbotapi.NewMessage(callback.Message.Chat.ID, "Untuk topup saldo, hubungi admin di @Maizil41.")
+        msg := tgbotapi.NewMessage(callback.Message.Chat.ID, "Untuk topup saldo, hubungi admin di @arnetadotid.")
         bot.Send(msg)
     }
 }
