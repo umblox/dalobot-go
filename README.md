@@ -13,7 +13,7 @@ Telegram bot untuk OpenWRT yang memungkinkan admin mengisi saldo pengguna dan pe
 
 1. **Clone repositori ini** ke perangkat OpenWRT:
    ```sh
-   git clone https://github.com/username/openwrt-telegram-bot.git
+   git clone https://github.com/umblox/dalobot-go.git
 2. Navigasikan ke direktori proyek :
    ```sh
    cd openwrt-telegram-bot
